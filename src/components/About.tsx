@@ -11,19 +11,19 @@ const About = () => {
               <h3 className="text-2xl font-semibold mb-4 text-blue-500">
                 My Story
               </h3>
-              <p className="text-zinc-300 mb-4">
+              <p className="text-zinc-300 mb-4 text-justify">
                 I got into Web Development with a mission to solve visibility,
                 usability, and accessibility problems, especially for
                 organizations, businesses, and brands.
               </p>
-              <p className="text-zinc-300 mb-4">
+              <p className="text-zinc-300 mb-4 text-justify">
                 What excites me most about web development is creating
                 exceptional user interfaces. I believe first impressions and
                 perceptions go a long way in shaping the user experience. That's
                 why I leverage frameworks like React and Next.js for their speed
                 and efficient development capabilities.
               </p>
-              <p className="text-zinc-300">
+              <p className="text-zinc-300 text-justify mb-4">
                 I bring over four years of experience in web development, with a
                 particular focus on creating elegant, minimalist designs that
                 enhance user experience. My specialty lies in combining
@@ -36,12 +36,12 @@ const About = () => {
               <h3 className="text-2xl font-semibold mb-4 text-blue-500">
                 Career Goals
               </h3>
-              <p className="text-zinc-300 mb-4">
+              <p className="text-zinc-300 mb-4 text-justify">
                 I'm currently seeking full-time roles and/or freelance
                 opportunities where I can contribute my skills and continue
                 growing as a developer.
               </p>
-              <p className="text-zinc-300 mb-6">
+              <p className="text-zinc-300 mb-6 text-justify">
                 I'm open to working with startups or established organizations
                 in fintech, health, real estate, education, and other relevant
                 sectors. I'm particularly interested in projects that challenge
