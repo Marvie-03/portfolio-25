@@ -6,6 +6,7 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import About from "@/components/About";
 import Me from "@/assets/MeNow.jpg";
+import Logo from "@/assets/logo.png";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,10 +66,17 @@ const Portfolio = () => {
       >
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           {/* Logo */}
-          <div className="text-xl font-bold">
-            <span className="text-blue-500">M</span>arvellous
-          </div>
-
+          {scrolled ? (
+            <div className="text-xl font-bold">
+              <img
+                src={Logo}
+                alt="Logo"
+                className="h-10 w-10 object-cover"
+              />
+            </div>
+          ) : (
+            <div className="text-xl font-bold"></div>
+          )}
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
