@@ -4,7 +4,7 @@ import { useState } from "react";
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    
     const formData = new FormData(e.currentTarget);
     const name = formData.get("name")?.toString().trim();
     const email = formData.get("email")?.toString().trim();
@@ -26,6 +26,7 @@ const Contact = () => {
     })
       .then(() => setSubmitted(true))
       .catch((error) => console.error(error));
+      e.preventDefault();
   };
 
   const cvuri = "/M. Modupe - Resume 2025.pdf";
