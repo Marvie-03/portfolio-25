@@ -1,5 +1,5 @@
 import { Github } from "lucide-react";
-import Next from "@/assets/next.png";
+import Next from "@/assets/Next.png";
 import Netflix from "@/assets/neflix-react-clone.web.app_.png";
 import BookFair from "@/assets/JosBookFair.png";
 import Aov from "@/assets/armyofvolunteers.org_.png";
