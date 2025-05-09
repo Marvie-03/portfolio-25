@@ -167,6 +167,8 @@ const Contact = () => {
                         </label>
                         <input
                           type="text"
+                          name="name"
+                          required
                           id="name"
                           className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-zinc-200"
                           placeholder="Your name"
@@ -181,6 +183,8 @@ const Contact = () => {
                         </label>
                         <input
                           type="email"
+                          name="email"
+                          required
                           id="email"
                           className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-zinc-200"
                           placeholder="your.email@example.com"
@@ -197,6 +201,7 @@ const Contact = () => {
                       </label>
                       <input
                         type="text"
+                        name="subject"
                         id="subject"
                         className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-zinc-200"
                         placeholder="What is this regarding?"
@@ -212,6 +217,8 @@ const Contact = () => {
                       </label>
                       <textarea
                         id="message"
+                        name="message"
+                        required
                         rows={6}
                         className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-zinc-200"
                         placeholder="Your message here..."
