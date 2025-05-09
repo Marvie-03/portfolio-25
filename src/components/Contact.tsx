@@ -5,28 +5,33 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     
-    const formData = new FormData(e.currentTarget);
-    const name = formData.get("name")?.toString().trim();
-    const email = formData.get("email")?.toString().trim();
-    const subject = formData.get("subject")?.toString().trim();
-    const message = formData.get("message")?.toString().trim();
+    // const formData = new FormData(e.currentTarget);
+    // const name = formData.get("name")?.toString().trim();
+    // const email = formData.get("email")?.toString().trim();
+    // const subject = formData.get("subject")?.toString().trim();
+    // const message = formData.get("message")?.toString().trim();
 
-    if (!name || !email || !subject || !message) {
-      alert("Please fill in all fields before submitting.");
-      return;
-    }
+    // if (!name || !email || !subject || !message) {
+    //   alert("Please fill in all fields before submitting.");
+    //   return;
+    // }
     // For Netlify Forms, the form will be handled automatically when the site is deployed
     // This code is just for the redirect and success message
+    const encode = (data: Record<string, string>) => {
+      return Object.keys(data)
+      .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+    };
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(
-        new FormData(e.currentTarget) as unknown as Record<string, string>
-      ).toString(),
+      body: encode({ "form-name": "contact", ...Object.fromEntries(Array.from(new FormData(e.currentTarget) as FormData).map(([key, value]) => [key, value.toString()])) }),
     })
       .then(() => setSubmitted(true))
       .catch((error) => console.error(error));
-      e.preventDefault();
+
+    e.preventDefault();
   };
 
   const cvuri = "/M. Modupe - Resume 2025.pdf";
